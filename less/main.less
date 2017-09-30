@@ -1,0 +1,214 @@
+@import "vendors/bootstrap/bootstrap.less";
+@import "vendors/font-awesome/font-awesome.less";
+
+@primary: #2196f3;
+@dark: #333;
+@light: #f4f4f4;
+
+html{
+	height: 100%;
+	width: 100%;
+}
+
+body{
+	height: 100%;
+	width: 100%;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color:@dark;
+	background-color: @light;
+}
+
+// Typography
+
+h1, h2, h3, h4, h5, h6{
+	margin: 0 0 35px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+p{
+	margin: 0 0 25px;
+	line-height: 1.7em;
+	font-size: 18px;
+}
+
+a{
+	color: @primary;
+
+	&:hover, &:focus{
+		text-decoration: none;
+		color: darken(@primary, 20%);
+	}
+}
+
+.navbar{
+	margin-bottom: 0;
+	border-bottom: 2px solid rgba(255,255,255,0.3);
+	text-transform: uppercase;
+	background-color: @dark;
+	font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.navbar-brand{
+	font-weight: 700;
+
+	&:focus{
+		outline: none;
+	}
+}
+
+.navbar-custom{
+	a{
+		color: @light;
+	}
+
+	.nav{
+		li{
+			a{
+				transition: background .3s ease-in-out;
+
+				&:hover{
+					outline:none;
+					background-color: rgba(255,255,255,0.2);
+				}
+			}
+		}
+	}
+}
+
+.navbar-toggle{
+	padding: 4px 6px;
+	font-size: 16px;
+	color: @light;
+}
+
+// Landing
+
+.intro{
+	display: table;
+	width: 100%;
+	height: 100vh;
+	padding: 100px 0;
+	text-align: center;
+	color: @light;
+	background: url(../img/header_bg.jpg) no-repeat center bottom scroll;
+	background-color: @dark;
+	background-size: cover;
+}
+
+.intro-body{
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.brand-heading{
+	font-size: 40px;
+}
+
+.intro-text{
+	font-size: 20px;
+}
+
+// Section content
+
+.content-section{
+	padding: 50px 0 0;
+}
+
+// Icon Block
+
+.blocl-icon-left{
+	overflow: auto;
+	margin-top: 30px;
+
+	h1, h2, h3{
+		margin: 0 0 10px 0;
+		padding: 0;
+		font-size: 20px;
+	}
+
+
+	.icon-content{
+		float: left;
+		width: 70%;
+	}
+
+	.icon{
+		float: left;
+		width: 30%;
+		margin-top: 10px;
+	}
+}
+
+.who-section{
+	width: 100%;
+	padding: 50px 0;
+	color: @light;
+	background: url(../img/section_bg.jpg) no-repeat center center scroll;
+}
+
+// Clients
+
+#clients{
+	text-align: center;
+	padding-bottom:40px;
+
+	img{
+		margin: 20px 15px;
+	}
+}
+
+// Contact section
+
+#contacts{
+	background: @dark;
+	color: @light;
+	padding-bottom: 70px;
+}
+
+// Scroll effect
+
+.page-scroll{
+	transition-property: transform;
+	transition-duration: 1s;
+	
+}
+
+// Media
+
+@media (min-width:768px) {
+	.navbar{
+		padding: 20px 0;
+		border-bottom: none;
+		background: transparent;
+		transition: background .5s ease-in-out, padding .5s ease-in-out;
+	}
+
+	.top-nav-collapse{
+		padding: 0;
+		background: @dark;
+	}
+
+	.navbar-custom.top-nav-collapse{
+		border-bottom: 1px solid rgba(255,255,255,0.3);
+	}
+
+	.intro{
+		padding:0;
+		height:100%;
+	}
+	
+	.brand-heading{
+		font-size: 80px;
+	}
+
+	.intro-text{
+		font-size: 40px;
+	}
+
+	.who-section{
+		padding: 100px 0;
+	}
+
+}
